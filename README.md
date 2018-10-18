@@ -1,4 +1,4 @@
-use module spring-boot-data-mybatis-example.
+please checkout branch dev,use module spring-boot-data-mybatis-example.
 
 for show this NullPointerException:
 step 1:
