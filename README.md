@@ -1,6 +1,7 @@
 please checkout branch dev,use module spring-boot-data-mybatis-example.
 
-for show this NullPointerException:
+for show this exception:
+
 step 1:
     create two databases:userdb1,userdb2
 
