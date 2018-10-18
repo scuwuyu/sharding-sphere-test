@@ -90,7 +90,7 @@ public class DataSourceConfig {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(initDataSource());
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
-                .getResources(env.getProperty("mybatis.sharding.mapper-locations")));
+                .getResources(env.getProperty("mybatis.mapper-locations")));
         return sessionFactory.getObject();
     }
 
