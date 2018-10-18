@@ -25,8 +25,8 @@ public class TestService {
 
         while (true){
 
-            int cityId1 = new Random().nextInt(200)*2+1;
-            int cityId2 = new Random().nextInt(200)*2;
+            int cityId1 = new Random().nextInt(200);
+            int cityId2 = new Random().nextInt(200);
 
             try {
                 log.info("cityId1={},cityId2={}",cityId1,cityId2);

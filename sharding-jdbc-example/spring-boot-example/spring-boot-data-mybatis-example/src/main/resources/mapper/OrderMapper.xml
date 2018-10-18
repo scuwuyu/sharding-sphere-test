@@ -29,7 +29,7 @@
 
     <select id="selectByBatch" resultType="java.lang.Integer">
         SELECT city_id
-        FROM user
+        FROM `user`
         WHERE city_id IN
         <foreach collection="cityIds" item="cityId" open="(" close=")" separator=",">
             #{cityId}

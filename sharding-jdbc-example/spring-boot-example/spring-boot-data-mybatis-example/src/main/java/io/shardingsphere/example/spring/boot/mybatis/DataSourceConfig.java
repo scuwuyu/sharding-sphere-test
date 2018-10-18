@@ -51,7 +51,7 @@ public class DataSourceConfig {
         tableRuleConfig.setLogicTable(SHARDING_TABLE);
         tableRuleConfig.setActualDataNodes(SHARDING_PREFIX + "${1..2}." + SHARDING_TABLE);
         // 配置分库策略
-        tableRuleConfig.setDatabaseShardingStrategyConfig(new InlineShardingStrategyConfiguration("city_id", "userdb${city_id % 2 + 1}"));
+        tableRuleConfig.setDatabaseShardingStrategyConfig(new InlineShardingStrategyConfiguration("city_id", SHARDING_PREFIX+"${city_id % 2 + 1}"));
 
         // 配置路由规则
         ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
