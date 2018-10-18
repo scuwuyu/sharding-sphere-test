@@ -26,13 +26,4 @@
     <delete id="delete">
         DELETE FROM t_order WHERE order_id = #{orderId,jdbcType=INTEGER}
     </delete>
-
-    <select id="selectByBatch" resultType="io.shardingsphere.example.spring.namespace.mybatis.fixtrue.entity.Order">
-        SELECT city_id AS userId
-        FROM rider_space
-        WHERE city_id IN
-        <foreach collection="cityIds">
-
-        </foreach>
-    </select>
 </mapper>

@@ -18,9 +18,10 @@
 package io.shardingsphere.example.spring.boot.mybatis.repository;
 
 import io.shardingsphere.example.spring.boot.mybatis.entity.Order;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
-@Mapper
+import java.util.List;
+
 public interface OrderRepository {
     
     void createIfNotExistsTable();
@@ -32,4 +33,6 @@ public interface OrderRepository {
     void delete(Long orderId);
     
     void dropTable();
+
+    List<Integer> selectByBatch(@Param("cityIds") List<Integer> cityIds);
 }

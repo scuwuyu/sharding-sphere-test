@@ -33,6 +33,4 @@ public interface OrderRepository {
     void delete(Long orderId);
     
     void dropTable();
-
-    List<Order> selectByBatch(@Param("cityIds") List<Integer> cityIds);
 }

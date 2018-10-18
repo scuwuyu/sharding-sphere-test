@@ -26,4 +26,14 @@
     <delete id="delete">
         DELETE FROM t_order WHERE order_id = #{orderId,jdbcType=INTEGER}
     </delete>
+
+    <select id="selectByBatch" resultType="java.lang.Integer">
+        SELECT city_id
+        FROM user
+        WHERE city_id IN
+        <foreach collection="cityIds" item="cityId" open="(" close=")" separator=",">
+            #{cityId}
+        </foreach>
+        limit 0,20
+    </select>
 </mapper>

@@ -17,17 +17,21 @@
 
 package io.shardingsphere.example.spring.boot.mybatis;
 
-import io.shardingsphere.example.spring.boot.mybatis.service.DemoService;
+import io.shardingsphere.example.spring.boot.mybatis.service.TestService;
+import io.shardingsphere.jdbc.spring.boot.SpringBootConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SpringBootConfiguration.class})
 public class SpringBootDataMain {
     
     public static void main(final String[] args) {
         try (ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootDataMain.class, args)) {
-            applicationContext.getBean(DemoService.class).demo();
+//            applicationContext.getBean(DemoService.class).demo();
+            System.out.println("启动正常");
+            applicationContext.getBean(TestService.class).selectByCycle();
         }
     }
 }
