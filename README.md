@@ -16,7 +16,7 @@ step 2:
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 step 3:
-    modify properties application.properties
+    modify properties file application.properties
 
 step 4:
     run io.shardingsphere.example.spring.boot.mybatis.SpringBootDataMain.main()
